@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/quiz.css">
+    <title>MBTI knowledge quiz</title>
+</head>
+<body>
+    <header>
+        
+        <div class="hero">
+            <nav class="navbar">
+                <div class="left">
+                    <img src="imengs types/fl/Logo.png" alt="logo">
+                </div>
+                <div class="right">
+                    <ul class="nav-menu">
+                        <li class="nav-item"><a href="index.html" class="hover-underline-animation">Home</a></li>
+                        <li class="nav-item"><a href="types.html" class="hover-underline-animation">Types</a></li>
+                        <li class="nav-item"><a href="Functions.html" class="hover-underline-animation">Functions</a></li>
+                        <li class="nav-item"><a href="Quiz.html" class="hover-underline-animation">Quiz</a></li>
+                        <li class="nav-item"><a href="login.html" class="login">Login</a></li>                    
+                    </ul>
+                    <a href="login.html" class="btn">Login</a>
+                    <div class="hamburguer">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </div>
+                 
+                
+            </nav>
+        </div>
+
+   </header>
+
+<script src="script.js"></script>
+</body>
+
+<body onload="NextQuestion(0)">
+    <main>
+        <!-- final quiz -->
+        <div class="modal-container" id="score-modal">
+
+            <div class="modal-content-container">
+
+                <h1>Congratulations, Quiz Completed.</h1>
+
+                <div class="grade-details">
+                    <p>Attempts : 10</p>
+                    <p>Wrong Answers : <span id="wrong-answers"></span></p>
+                    <p>Right Answers : <span id="right-answers"></span></p>
+                    <p>Grade : <span id="grade-percentage"></span>%</p>
+                    <p ><span id="remarks"></span></p>
+                </div>
+
+                <div class="modal-button-container">
+                    <button onclick="closeScoreModal()">Continue</button>
+                </div>
+
+            </div>
+        </div>
+<!-- fim modelo final quiz -->
+
+        <div class="game-quiz-container">
+
+            <div class="game-details-container">
+                <h1>Score : <span id="player-score"></span> / 10</h1>
+                <h1> Question : <span id="question-number"></span> / 10</h1>
+            </div>
+
+            <div class="game-question-container">
+                <h1 id="display-question"></h1>
+            </div>
+
+            <div class="game-options-container">
+
+               <div class="modal-container" id="option-modal">
+
+                    <div class="modal-content-container">
+                         <h1>Please Pick An Option</h1>
+
+                         <div class="modal-button-container">
+                            <button onclick="closeOptionModal()">Continue</button>
+                        </div>
+
+                    </div>
+
+               </div>
+
+                <span>
+                    <input type="radio" id="option-one" name="option" class="radio" value="optionA" />
+                    <label for="option-one" class="option" id="option-one-label"></label>
+                </span>
+
+
+                <span>
+                    <input type="radio" id="option-two" name="option" class="radio" value="optionB" />
+                    <label for="option-two" class="option" id="option-two-label"></label>
+                </span>
+
+
+                <span>
+                    <input type="radio" id="option-three" name="option" class="radio" value="optionC" />
+                    <label for="option-three" class="option" id="option-three-label"></label>
+                </span>
+
+
+                <span>
+                    <input type="radio" id="option-four" name="option" class="radio" value="optionD" />
+                    <label for="option-four" class="option" id="option-four-label"></label>
+                </span>
+
+
+            </div>
+
+            <div class="next-button-container">
+                <button onclick="handleNextQuestion()">Next Question</button>
+            </div>
+
+        </div>
+        
+    </main>
+
+    <footer>
+        <p>Contact</p>
+        <div class="social">
+            <a href="#"><i class="fabfa-Number"><IMG src="imengs types/fl/facebookfoot.png" alt="facebook.logo"></i></a>
+            <a href="#"><i class="fabfa-instagram"><IMG src="imengs types/fl/whatsappfoot.png" alt="whatsapp.logo"></i></a>
+            <a href="#"><i class="fabfa-email"><IMG src="imengs types/fl/emailfoot.png" alt="email.logo"></i></a>
+        </div>
+        <p class="end">CopyRight By HB mbti</p>
+        </footer>
+    <script src="assets/js/quiz.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
